@@ -16,6 +16,9 @@ class Elevator extends Singleton {
 	 *	@return Elevator $this
 	 */
 	public function sendTo($iFloor) {
+		if (!is_integer($iFloor)) {
+			throw new \InvalidArgumentException("Floor number must be an integer");
+		}
 		if ($iFloor < 1) {
 			throw new \OutOfBoundsException("Minimal floor is 1");
 		}
@@ -37,6 +40,9 @@ class Elevator extends Singleton {
 	 *	@return Elevator $this
 	 */
 	public function push($iPeople) {
+		if (!is_integer($iPeople)) {
+			throw new \InvalidArgumentException("The number of people must be an integer");
+		}
 		if ($iPeople < 0) {
 			throw new \InvalidArgumentException("Count people can't be negative number");
 		}
@@ -49,6 +55,9 @@ class Elevator extends Singleton {
 	 *	@return Elevator - $this
 	 */
 	public function pop($iPeople) {
+		if (!is_integer($iPeople)) {
+			throw new \InvalidArgumentException("The number of people must be an integer");
+		}
 		if ($iPeople < 0) {
 			throw new \InvalidArgumentException("Count people can't be negative number");
 		}

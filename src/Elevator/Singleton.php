@@ -2,12 +2,12 @@
 namespace Elevator;
 
 class Singleton {
-	static $instance = null;
 	public static function getInstance() {
-		if (self::$instance === null) {
-			self::$instance = new static();
+		static $instance = null;
+		if ($instance === null) {
+			$instance = new static();
 		}
-		return self::$instance;
+		return $instance;
 	}
 	private function __construct() {}
 	private function __clone() {}

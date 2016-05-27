@@ -31,5 +31,12 @@ class Application {
 		} catch (\Exception $e) {
 			echo $e->getMessage() . PHP_EOL;
 		}
+
+		try {
+			Elevator::getInstance()->sendTo(array(3));
+			echo Elevator::getInstance()->getState() . PHP_EOL;
+		} catch (\Exception $e) {
+			echo $e->getMessage() . PHP_EOL;
+		}
 	} 
 }

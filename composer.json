@@ -1,0 +1,13 @@
+{
+    "name": "lenchv/binarystudio_hometask2",
+    "authors": [
+        {
+            "name": "lenchv",
+            "email": "lenchvov@rambler.ru"
+        }
+    ],
+    "autoload": {
+        "classmap": ["src/"]
+    },
+    "require": {}
+}
